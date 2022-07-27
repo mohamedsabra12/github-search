@@ -17,6 +17,7 @@ const Users = ({ navigation, route }: IUsersProp): JSX.Element => {
   useEffect(() => {
     dispatch(
       queryUsersAction(route.params.type, route.params.query, page, (newUsers: IUser[]) => {
+        console.log("Doneeeeeeeeeee!!")
         const fullUsers: IUser[] = [...users, ...newUsers]
         setUsers(fullUsers)
         setLoading(false)
@@ -32,7 +33,7 @@ const Users = ({ navigation, route }: IUsersProp): JSX.Element => {
       ) : (
         <FlatList
           data={users}
-          keyExtractor={({ id }) => id}
+          keyExtractor={({ id }, index) => id + " " + index}
           renderItem={({ item }) => {
             return (
               <Card>

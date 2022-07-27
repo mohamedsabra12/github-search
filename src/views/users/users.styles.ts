@@ -5,8 +5,8 @@ import { R } from "@github/res"
 
 export const Card = styled(View)`
   flex-direction: row;
-  padding-top: 15;
-  padding-left: 5;
+  padding-top: 15px;
+  padding-left: 5px;
 `
 
 export const UserImage = styled(Image)`

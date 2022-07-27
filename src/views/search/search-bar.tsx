@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { TouchableOpacity } from "react-native"
-import { Row, Column, Image, Input } from "@github-shared"
+import { Row, Column, Image, Input, Text } from "@github-shared"
 import { AppRoute } from "@github/navigation/routes"
 import image from "@github/assets/images"
 import { R } from "@github/res"
 import { ISearchProp } from "./search.prop"
-import { Button, OptionText } from "./search.styles"
+import { Button } from "./search.styles"
 
 export const SearchBar = ({ navigation }: ISearchProp): JSX.Element => {
   const [query, setQuery] = useState("")
@@ -27,7 +27,7 @@ export const SearchBar = ({ navigation }: ISearchProp): JSX.Element => {
           onPress={() => {
             navigation.navigate(AppRoute.Users, { query, type: R.string.shared.users_type })
           }}>
-          <OptionText>{query.length != 0 ? "People with " + query : ""}</OptionText>
+          <Text preset="primary">{query.length != 0 ? "People with " + query : ""}</Text>
         </Button>
       </Row>
 
@@ -36,7 +36,7 @@ export const SearchBar = ({ navigation }: ISearchProp): JSX.Element => {
           onPress={() => {
             navigation.navigate(AppRoute.Users, { query, type: R.string.shared.organization_type })
           }}>
-          <OptionText>{query.length != 0 ? "organizations with " + query : ""}</OptionText>
+          <Text preset="primary">{query.length != 0 ? "organizations with " + query : ""}</Text>
         </Button>
       </Row>
     </Column>

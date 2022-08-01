@@ -2,6 +2,7 @@ import { ImageRequireSource } from "react-native"
 
 const image = Object.freeze({
   back: require("./back.png"),
+  backAndroid: require("./backAndroid.png"),
   cancel: require("./cancel.png"),
   home: require("./home.png"),
   organization: require("./organization.png"),

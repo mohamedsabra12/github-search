@@ -1,6 +1,7 @@
 import React from "react"
 import { Container, Text } from "@github-shared"
 import { SearchBar } from "@github/views/search/search-bar"
+import { R } from "@github/res"
 import { ISearchProp } from "./search.prop"
 import { SearchScreen } from "./search.styles"
 
@@ -9,7 +10,7 @@ const Search = ({ navigation }: ISearchProp): JSX.Element => {
     <Container>
       <SearchBar navigation={navigation} />
       <SearchScreen>
-        <Text>Search Results!</Text>
+        <Text>{R.string.shared.searchPage}</Text>
       </SearchScreen>
     </Container>
   )

@@ -1,6 +1,7 @@
 import { TouchableOpacity } from "react-native"
 import styled from "styled-components/native"
 import { Column } from "@github-shared"
+import { R } from "@github/res"
 
 export const SearchScreen = styled(Column)`
   flex: 1;
@@ -11,8 +12,8 @@ export const SearchScreen = styled(Column)`
 
 export const Button = styled(TouchableOpacity)`
   align-items: center;
-  margin-top: 10px;
-  margin-left: 5px;
+  margin-top: ${R.spacing.small}px;
+  margin-left: ${R.spacing.smaller}px;
   align-items: flex-start;
   flex: 1;
 `

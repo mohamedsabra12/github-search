@@ -2,9 +2,14 @@ const string = Object.freeze({
   shared: {
     errorTitle: "Error",
     organizatios: "Organizations",
-    organization_type: "org",
+    organizationType: "org",
     users: "Users",
-    users_type: "users",
+    usersType: "users",
+    searchPeople: "People with",
+    searchOrgs: "organizations with",
+    searchPage: "Search Results!",
+    home: "Home",
+    search: "Search!",
   },
   errors: {
     networkError: "Please check your internet connection and try again",

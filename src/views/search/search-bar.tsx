@@ -16,7 +16,7 @@ export const SearchBar = ({ navigation }: ISearchProp): JSX.Element => {
           <Image source={image.back} />
         </TouchableOpacity>
         <Input
-          placeholder="Search!"
+          placeholder={R.string.shared.search}
           value={query}
           onChangeText={(newQuery) => setQuery(newQuery)}
         />
@@ -25,18 +25,22 @@ export const SearchBar = ({ navigation }: ISearchProp): JSX.Element => {
       <Row>
         <Button
           onPress={() => {
-            navigation.navigate(AppRoute.Users, { query, type: R.string.shared.users_type })
+            navigation.navigate(AppRoute.Users, { query, type: R.string.shared.usersType })
           }}>
-          <Text preset="primary">{query.length != 0 ? "People with " + query : ""}</Text>
+          <Text preset="primary">
+            {query.length != 0 ? R.string.shared.searchPeople + " " + query : ""}
+          </Text>
         </Button>
       </Row>
 
       <Row>
         <Button
           onPress={() => {
-            navigation.navigate(AppRoute.Users, { query, type: R.string.shared.organization_type })
+            navigation.navigate(AppRoute.Users, { query, type: R.string.shared.organizationType })
           }}>
-          <Text preset="primary">{query.length != 0 ? "organizations with " + query : ""}</Text>
+          <Text preset="primary">
+            {query.length != 0 ? R.string.shared.searchOrgs + " " + query : ""}
+          </Text>
         </Button>
       </Row>
     </Column>

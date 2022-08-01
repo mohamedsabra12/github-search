@@ -11,8 +11,8 @@ export const UserBar = ({ navigation, route }: IUsersProp): JSX.Element => {
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <Image source={image.back} />
       </TouchableOpacity>
-      <Text preset="primaryLarger" style={{ padding: 5 }}>
-        {route.params.type == R.string.shared.organization_type
+      <Text preset="primaryLarger">
+        {route.params.type == R.string.shared.organizationType
           ? R.string.shared.organizatios
           : R.string.shared.users}
       </Text>

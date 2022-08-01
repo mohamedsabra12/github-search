@@ -17,13 +17,11 @@ const Users = ({ navigation, route }: IUsersProp): JSX.Element => {
   useEffect(() => {
     dispatch(
       queryUsersAction(route.params.type, route.params.query, page, (newUsers: IUser[]) => {
-        console.log("Doneeeeeeeeeee!!")
-        const fullUsers: IUser[] = [...users, ...newUsers]
-        setUsers(fullUsers)
+        setUsers((prevUsers) => [...prevUsers, ...newUsers])
         setLoading(false)
       }),
     )
-  }, [dispatch, page, route.params.type, route.params.query, users])
+  }, [dispatch, route.params.type, route.params.query, page])
 
   return (
     <Column>
